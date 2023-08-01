@@ -9,7 +9,7 @@ class CarouselV extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      options: CarouselOptions(height: 300),
+      options: CarouselOptions(height: 200),
       items: carouselItems,
     );
   }
