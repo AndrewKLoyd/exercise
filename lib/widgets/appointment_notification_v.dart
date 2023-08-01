@@ -19,7 +19,7 @@ class AppointmetnNotificationV extends StatelessWidget {
             children: [
               Text(
                 notification.title,
-                style: const TextStyle(fontWeight: FontWeight.w600),
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               ShadowedTitle(
                 bgColor: Colors.red.shade500,
@@ -34,15 +34,14 @@ class AppointmetnNotificationV extends StatelessWidget {
             height: 5,
           ),
           Text(
-            "${notification.appointment.doctorName}. ${notification.appointment.title}. ${DateFormat("dd.MM.yyyy HH:MM").format(notification.appointment.date)}",
-            style: const TextStyle(fontWeight: FontWeight.w200),
-          ),
+              "${notification.appointment.doctorName}. ${notification.appointment.title}. ${DateFormat("dd.MM.yyyy HH:MM").format(notification.appointment.date)}",
+              style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(
             height: 10,
           ),
           Text(
             DateFormat("dd.MM.yyyy").format(notification.date),
-            style: const TextStyle(fontWeight: FontWeight.w200),
+            style: Theme.of(context).textTheme.titleSmall,
           )
         ]),
       ),

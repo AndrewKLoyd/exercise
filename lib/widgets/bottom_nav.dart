@@ -9,12 +9,13 @@ class BottomNavigation extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         TextButton.icon(
-          label: const Text("Меню"),
+          label: Text("Меню", style: Theme.of(context).textTheme.titleMedium),
           onPressed: () {},
           icon: const Icon(Icons.list),
         ),
         TextButton.icon(
-            label: const Text("Штрихкод"),
+            label: Text("Штрихкод",
+                style: Theme.of(context).textTheme.titleMedium),
             onPressed: () {},
             icon: const Icon(Icons.qr_code_scanner_sharp))
       ]),

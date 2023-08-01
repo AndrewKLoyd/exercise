@@ -23,10 +23,10 @@ class CarouselItem extends StatelessWidget {
               children: [
                 Text(
                   carouselItem.title,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 20,
-                      color: Colors.white),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleLarge
+                      ?.copyWith(color: Colors.white),
                 ),
                 const SizedBox(
                   height: 10,
@@ -35,10 +35,13 @@ class CarouselItem extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Expanded(
-                      flex: 4,
+                      flex: 2,
                       child: Text(
                         carouselItem.content,
-                        style: const TextStyle(color: Colors.white),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleSmall
+                            ?.copyWith(color: Colors.white),
                       ),
                     ),
                     Expanded(
@@ -46,17 +49,19 @@ class CarouselItem extends StatelessWidget {
                       children: [
                         Text(
                           carouselItem.oldSideText,
-                          style: const TextStyle(
-                            decoration: TextDecoration.lineThrough,
-                            color: Colors.white,
-                          ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleMedium
+                              ?.copyWith(
+                                  color: Colors.white,
+                                  decoration: TextDecoration.lineThrough),
                         ),
                         Text(
                           carouselItem.sideText,
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600),
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge
+                              ?.copyWith(color: Colors.white),
                         ),
                       ],
                     ))

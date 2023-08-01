@@ -21,7 +21,7 @@ class AppointmentV extends StatelessWidget {
             //
             Text(
               appointment.title,
-              style: const TextStyle(fontWeight: FontWeight.w700),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(
               height: 10,
@@ -73,12 +73,13 @@ class AppointmentV extends StatelessWidget {
                   bgColor: Colors.black12,
                   text: Text(
                     DateFormat("dd.MM.yyyy, HH:MM").format(appointment.date),
-                    style: TextStyle(fontWeight: FontWeight.w600),
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                 ),
                 ShadowedTitle(
                   bgColor: Colors.black12,
-                  text: Text(appointment.patientName),
+                  text: Text(appointment.patientName,
+                      style: Theme.of(context).textTheme.titleMedium),
                   icon: const Icon(
                     Icons.person,
                     size: 16,

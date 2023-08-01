@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class Bookmark extends StatelessWidget {
   const Bookmark({super.key, required this.title});
@@ -11,7 +10,7 @@ class Bookmark extends StatelessWidget {
     return Card(
       child: Container(
         padding: const EdgeInsets.all(20),
-        child: Text(title),
+        child: Text(title, style: Theme.of(context).textTheme.titleLarge),
       ),
     );
   }
