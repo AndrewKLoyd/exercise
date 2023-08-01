@@ -71,8 +71,19 @@ class HomeV extends StatelessWidget {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(255, 60, 148, 168),
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(24))),
         onPressed: () {},
-        child: const Text("Записаться"),
+        child: Text(
+          "записаться",
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge
+              ?.copyWith(color: Colors.white),
+        ),
       ),
       bottomNavigationBar: const BottomNavigation(),
       appBar: AppBar(

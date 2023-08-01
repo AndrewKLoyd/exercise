@@ -8,6 +8,7 @@ class CarouselItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),

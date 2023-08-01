@@ -8,6 +8,7 @@ class Bookmark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Container(
         padding: const EdgeInsets.all(20),
         child: Text(title, style: Theme.of(context).textTheme.titleLarge),

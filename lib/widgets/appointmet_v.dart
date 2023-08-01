@@ -10,6 +10,7 @@ class AppointmentV extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       elevation: 5,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
